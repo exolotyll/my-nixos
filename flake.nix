@@ -9,7 +9,7 @@
         };
     };
 
-    outputs = { nixpkgs, home-manager, ... }: let
+    outputs = { nixpkgs, home-manager }: let
         system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages.${system};
     in {
@@ -17,7 +17,7 @@
             victus = nixpkgs.lib.nixosSystem {
                 inherit system;
                 modules = [
-                    ./hosts/victus/configuration.nix
+                    ./system/configuration.nix
                 ];
             };
         };
