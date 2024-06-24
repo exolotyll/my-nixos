@@ -10,7 +10,7 @@
             availableKernelModules = [
                 "nvme"
                 "xhci_pci"
-                "usbid"
+                "usbhid"
                 "sd_mod"
                 "rtsx_pci_sdmmc"
             ];
