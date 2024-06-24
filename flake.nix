@@ -2,7 +2,7 @@
     description = "My NixOS Configuration";
 
     inputs = {
-        nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05"
+        nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
         home-manager = {
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -18,7 +18,7 @@
                 modules = [
                     ./hosts/victus/configuration.nix
                 ];
-            }
+            };
         };
 
         homeConfigurations = {
@@ -28,5 +28,5 @@
                 ];
             };
         };
-    }
+    };
 }
