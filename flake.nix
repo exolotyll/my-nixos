@@ -15,6 +15,7 @@
     in {
         nixosConfigurations = {
             victus = nixpkgs.lib.nixosSystem {
+                inherit system;
                 modules = [
                     ./hosts/victus/configuration.nix
                 ];
@@ -23,6 +24,7 @@
 
         homeConfigurations = {
             exolotyll = home-manager.lib.homeManagerConfiguration {
+                inherit pkgs;
                 modules = [
                     ./home-manager/home.nix
                 ];
